@@ -4,15 +4,7 @@ import ProgramBadge from "@/components/ProgramBadge";
 import { homeContent } from "@/lib/content";
 import { events } from "@/lib/events";
 
-const chapterLabels = {
-  "south-florida": "South Florida",
-  "north-florida": "North Florida",
-};
-
-const chapterColors = {
-  "south-florida": "bg-cobalt",
-  "north-florida": "bg-violet",
-};
+const impactColors = ["bg-cobalt", "bg-poppy", "bg-violet"];
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -130,14 +122,11 @@ export default function Home() {
         <div className="impact-grid">
           {pastEvents.map((event, index) => (
             <article className="event-card" key={event.title}>
-              <div className={`event-card__color ${chapterColors[event.chapter]}`} style={{ opacity: 0.7 + (index % 3) * 0.1 }} />
+              <div className={`event-card__color ${impactColors[index % impactColors.length]}`} style={{ opacity: 0.7 + (index % 3) * 0.1 }} />
               <div className="event-card__content">
                 <p className="eyebrow text-violet">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
                 <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>
                 <p className="mt-2 text-ink/80">{event.description}</p>
-                <span className="mt-4 inline-flex rounded-full bg-sunshine px-3 py-1 text-sm font-bold text-ink">
-                  {chapterLabels[event.chapter]}
-                </span>
               </div>
             </article>
           ))}
