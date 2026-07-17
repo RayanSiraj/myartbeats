@@ -1,3 +1,3 @@
 export default function Teams() {
-  return <main><h1>Teams</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">Teams</h1></section>;
 }

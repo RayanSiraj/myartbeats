@@ -1,3 +1,3 @@
 export default function Volunteer() {
-  return <main><h1>Volunteer</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">Volunteer</h1></section>;
 }

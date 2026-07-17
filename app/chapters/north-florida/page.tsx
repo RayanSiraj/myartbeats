@@ -1,3 +1,3 @@
 export default function NorthFloridaChapter() {
-  return <main><h1>North Florida Chapter</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">North Florida Chapter</h1></section>;
 }

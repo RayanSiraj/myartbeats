@@ -1,3 +1,3 @@
 export default function Mission() {
-  return <main><h1>Mission</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">Mission</h1></section>;
 }

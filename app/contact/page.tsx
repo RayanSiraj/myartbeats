@@ -1,3 +1,3 @@
 export default function Contact() {
-  return <main><h1>Contact</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">Contact</h1></section>;
 }

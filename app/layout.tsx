@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import localFont from "next/font/local";
+import { Atkinson_Hyperlegible, Baloo_2 } from "next/font/google";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  variable: "--font-baloo-2",
+  weight: ["700", "800"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ["latin"],
+  variable: "--font-atkinson",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,25 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${baloo.variable} ${atkinson.variable}`}
       >
-        <header>
-          <nav aria-label="Main navigation">
-            <Link href="/">My Art Beats</Link>{" "}
-            <Link href="/about">About</Link>{" "}
-            <Link href="/about/mission">Mission</Link>{" "}
-            <Link href="/about/teams">Teams</Link>{" "}
-            <Link href="/chapters/south-florida">South Florida</Link>{" "}
-            <Link href="/chapters/north-florida">North Florida</Link>{" "}
-            <Link href="/join">Join</Link>{" "}
-            <Link href="/events">Events</Link>{" "}
-            <Link href="/contact">Contact</Link>
-          </nav>
-        </header>
+        <SiteHeader />
         <main>{children}</main>
-        <footer>
-          <p>My Art Beats</p>
-        </footer>
+        <SiteFooter />
       </body>
     </html>
   );

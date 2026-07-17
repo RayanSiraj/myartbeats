@@ -1,3 +1,3 @@
 export default function About() {
-  return <main><h1>About</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">About</h1></section>;
 }

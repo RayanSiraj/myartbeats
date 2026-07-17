@@ -1,3 +1,3 @@
 export default function StartAChapter() {
-  return <main><h1>Start a Chapter</h1></main>;
+  return <section className="site-container py-16"><h1 className="section-heading">Start a Chapter</h1></section>;
 }
