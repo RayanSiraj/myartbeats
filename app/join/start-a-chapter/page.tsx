@@ -6,7 +6,7 @@ export default function StartAChapter() {
   return (
     <section className="site-container py-16">
       <div className="about-hero__intro">
-        <p className="eyebrow text-poppy">Join My Art Beats</p>
+        <p className="eyebrow text-poppy-text">Join My Art Beats</p>
         <h1 className="section-heading mt-3">Start a chapter.</h1>
         <div className="join-hero__pulse"><PulseLine animate={false} color="poppy" variant="underline" /></div>
         <p>{joinContent.startChapter.intro}</p>

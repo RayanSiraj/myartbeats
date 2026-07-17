@@ -20,7 +20,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="site-container home-hero__grid">
           <div>
-            <p className="eyebrow text-poppy">A student-led creative community</p>
+            <p className="eyebrow text-poppy-text">A student-led creative community</p>
             <h1 className="hero-beats">
               <span>CREATE.</span>
               <span>CONNECT.</span>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       <section className="site-container py-16">
-        <p className="eyebrow text-poppy">Our collaborators</p>
+        <p className="eyebrow text-poppy-text">Our collaborators</p>
         <h2 className="section-heading mt-3 text-ink">Making room for more voices</h2>
         <div className="collaborator-list">
           {homeContent.collaborators.map((collaborator) => (

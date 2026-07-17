@@ -7,6 +7,7 @@
   --color-ink: #232a45;
   --color-cobalt: #2b4fc2;
   --color-poppy: #e0432f;
+  --color-poppy-text: #c93a28;
   --color-violet: #7a3ea8;
   --color-sunshine: #ffc53d;
   --font-size-xs: 0.875rem;
@@ -447,7 +448,7 @@ button:focus-visible {
 
   .site-instagram:hover,
   .site-footer__bottom a:hover {
-    color: var(--color-poppy);
+    color: var(--color-poppy-text);
   }
 
   .site-menu-button {
@@ -565,7 +566,7 @@ button:focus-visible {
   }
 
   .hero-beats span:nth-child(1) { color: var(--color-cobalt); }
-  .hero-beats span:nth-child(2) { color: var(--color-poppy); }
+  .hero-beats span:nth-child(2) { color: var(--color-poppy-text); }
   .hero-beats span:nth-child(3) { color: var(--color-violet); }
 
   .hero-pulse {
@@ -591,7 +592,7 @@ button:focus-visible {
   }
 
   .home-act--create { color: var(--color-cobalt); }
-  .home-act--connect { color: var(--color-poppy); }
+  .home-act--connect { color: var(--color-poppy-text); }
   .home-act--coalesce { color: var(--color-violet); }
 
   .home-act__body {
@@ -822,6 +823,11 @@ button:focus-visible {
     transform: translateY(-2px);
   }
 
+  .join-follow-card .button-outline {
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+
   .join-subpage-hero {
     max-width: 48rem;
     padding: 5rem 0 2.5rem;
@@ -886,7 +892,7 @@ button:focus-visible {
   .join-form-card__iframe {
     display: block;
     width: 100%;
-    height: 1200px;
+    height: 700px;
     border: 0;
   }
 
@@ -966,7 +972,7 @@ button:focus-visible {
   }
 
   .mission-beats span:nth-child(1) { color: var(--color-cobalt); }
-  .mission-beats span:nth-child(2) { color: var(--color-poppy); }
+  .mission-beats span:nth-child(2) { color: var(--color-poppy-text); }
   .mission-beats span:nth-child(3) { color: var(--color-violet); }
 
   .mission-hero__pulse {
@@ -995,7 +1001,7 @@ button:focus-visible {
   }
 
   .mission-pillar--create { color: var(--color-cobalt); }
-  .mission-pillar--connect { color: var(--color-poppy); }
+  .mission-pillar--connect { color: var(--color-poppy-text); }
   .mission-pillar--coalesce { color: var(--color-violet); }
 
   .mission-pillar__content {
@@ -1044,6 +1050,7 @@ button:focus-visible {
   .team-grid {
     display: grid;
     gap: 1rem;
+    align-items: start;
   }
 
   .team-card {
@@ -1173,7 +1180,7 @@ button:focus-visible {
     margin-top: 1rem;
     border-radius: var(--radius-card);
     padding: 2rem;
-    background: var(--color-poppy);
+    background: var(--color-poppy-text);
     color: var(--color-canvas);
   }
 
@@ -1228,7 +1235,7 @@ button:focus-visible {
 
   @media (max-width: 47.99rem) {
     .join-form-card__iframe {
-      height: 900px;
+      height: 600px;
     }
   }
 

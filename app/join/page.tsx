@@ -8,7 +8,7 @@ export default function Join() {
     <section>
       <div className="site-container join-hero">
         <div className="join-hero__intro">
-          <p className="eyebrow text-poppy">Get involved</p>
+          <p className="eyebrow text-poppy-text">Get involved</p>
           <h1 className="section-heading mt-3">Bring your beat.</h1>
           <div className="join-hero__pulse"><PulseLine animate={false} color="poppy" variant="underline" /></div>
           <p>{joinContent.intro}</p>

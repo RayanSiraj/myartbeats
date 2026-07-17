@@ -121,7 +121,7 @@ export default function EventsExplorer() {
           </div>
         ) : status === "upcoming" ? (
           <div className="events-empty events-empty--upcoming">
-            <p className="eyebrow text-poppy">Stay in the loop</p>
+            <p className="eyebrow text-poppy-text">Stay in the loop</p>
             <h2 className="display-font mt-2 text-3xl font-extrabold text-ink">New events are announced on Instagram first.</h2>
             <p className="mt-3">PLACEHOLDER: Follow along for the next exhibition, workshop, visit, or fundraiser, and reach out when you are ready to make something with us.</p>
             <div className="events-empty__actions">
@@ -146,7 +146,9 @@ export default function EventsExplorer() {
             <div aria-hidden="true" className="events-timeline__spine">
               <PulseLine animate={false} color="poppy" variant="vertical" />
             </div>
-            {Object.entries(groupedEvents).map(([year, yearEvents]) => (
+            {Object.entries(groupedEvents)
+              .sort(([yearA], [yearB]) => yearB.localeCompare(yearA))
+              .map(([year, yearEvents]) => (
               <section className="events-year" key={year}>
                 <h2 className="events-year__heading">{year}</h2>
                 {yearEvents.map((event, index) => (

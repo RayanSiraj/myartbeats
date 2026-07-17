@@ -5,7 +5,7 @@ export default function Teams() {
   return (
     <section>
       <div className="site-container teams-hero">
-        <p className="eyebrow text-poppy">Our teams</p>
+        <p className="eyebrow text-poppy-text">Our teams</p>
         <h1 className="section-heading mt-3">The people behind the beat.</h1>
         <p>{teamContent.intro}</p>
       </div>

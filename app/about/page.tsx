@@ -7,7 +7,7 @@ export default function About() {
     <section className="about-hero">
       <div className="site-container">
         <div className="about-hero__intro">
-          <p className="eyebrow text-poppy">About My Art Beats</p>
+          <p className="eyebrow text-poppy-text">About My Art Beats</p>
           <h1 className="section-heading mt-3">Art, music, and room to belong.</h1>
           <div className="about-hero__pulse">
             <PulseLine animate={false} color="poppy" variant="underline" />

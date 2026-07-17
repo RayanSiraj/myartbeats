@@ -5,7 +5,7 @@ export default function Volunteer() {
   return (
     <section>
       <div className="site-container join-subpage-hero">
-        <p className="eyebrow text-poppy">Join My Art Beats</p>
+        <p className="eyebrow text-poppy-text">Join My Art Beats</p>
         <h1 className="section-heading mt-3">Volunteer your beat.</h1>
         <div className="join-hero__pulse"><PulseLine animate={false} color="poppy" variant="underline" /></div>
         <p>{joinContent.volunteer.intro}</p>
@@ -14,7 +14,7 @@ export default function Volunteer() {
         <div className="join-form-card">
           <div className="join-form-card__header">
             <div>
-              <p className="eyebrow text-poppy">A first step</p>
+              <p className="eyebrow text-poppy-text">A first step</p>
               <h2 className="mt-2">Volunteer interest form</h2>
             </div>
             <a

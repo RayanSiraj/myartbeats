@@ -5,6 +5,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts}",
   ],
   theme: {
     extend: {
@@ -13,6 +14,7 @@ const config: Config = {
         ink: "var(--color-ink)",
         cobalt: "var(--color-cobalt)",
         poppy: "var(--color-poppy)",
+        "poppy-text": "var(--color-poppy-text)",
         violet: "var(--color-violet)",
         sunshine: "var(--color-sunshine)",
       },
@@ -32,6 +34,23 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    "about-card--mission",
+    "about-card--teams",
+    "join-card--volunteer",
+    "join-card--chapter",
+    "mission-pillar--create",
+    "mission-pillar--connect",
+    "mission-pillar--coalesce",
+    "chapter-card--south",
+    "chapter-card--north",
+    "chapter-page--south",
+    "chapter-page--north",
+    "team-card__portrait--cobalt",
+    "team-card__portrait--poppy",
+    "team-card__portrait--violet",
+    "team-card__portrait--sunshine",
+  ],
   plugins: [],
 };
 export default config;

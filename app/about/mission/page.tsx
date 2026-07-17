@@ -6,7 +6,7 @@ export default function Mission() {
     <>
       <section className="mission-hero">
         <div className="site-container">
-          <p className="eyebrow text-poppy">Our mission</p>
+          <p className="eyebrow text-poppy-text">Our mission</p>
           <h1 className="mission-beats">
             <span>CREATE.</span>
             <span>CONNECT.</span>
