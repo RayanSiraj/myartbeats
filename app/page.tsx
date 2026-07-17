@@ -21,7 +21,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export default function Home() {
-  const pastEvents = events.filter((event) => event.status === "past").slice(0, 6);
+  const pastEvents = events
+    .filter((event) => event.status === "past")
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 6);
 
   return (
     <>
@@ -94,16 +97,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="site-container py-16">
-        <p className="eyebrow text-poppy">Our collaborators</p>
-        <h2 className="section-heading mt-3 text-ink">Making room for more voices</h2>
-        <div className="collaborator-list">
-          {homeContent.collaborators.map((collaborator) => (
-            <span className="collaborator-chip" key={collaborator}>{collaborator}</span>
-          ))}
-        </div>
-      </section>
-
       <section className="site-container py-8">
         <div className="involvement">
           <p className="eyebrow">Get involved</p>
@@ -113,6 +106,16 @@ export default function Home() {
             <Link className="button button-outline" href="/join/start-a-chapter">Start a Chapter</Link>
             <Link className="button button-outline" href="/join/volunteer">Volunteer</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="site-container py-16">
+        <p className="eyebrow text-poppy">Our collaborators</p>
+        <h2 className="section-heading mt-3 text-ink">Making room for more voices</h2>
+        <div className="collaborator-list">
+          {homeContent.collaborators.map((collaborator) => (
+            <span className="collaborator-chip" key={collaborator}>{collaborator}</span>
+          ))}
         </div>
       </section>
 
