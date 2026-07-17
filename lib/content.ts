@@ -100,3 +100,45 @@ export const teamContent = {
     { title: "North Florida", href: "/chapters/north-florida", className: "chapter-card--north", description: "PLACEHOLDER: Meet the people and programs growing our North Florida creative community." },
   ],
 };
+
+export const joinContent = {
+  intro:
+    "PLACEHOLDER: There are many ways to bring your time, creativity, and care to My Art Beats. Join a local effort, help lead a chapter, or stay close to the work as it grows.",
+  pathways: [
+    {
+      title: "Become a Volunteer",
+      description: "PLACEHOLDER: Share your energy, skills, and encouragement in creative programs and community visits.",
+      href: "/join/volunteer",
+      className: "join-card--volunteer",
+      eyebrow: "Lend your time",
+    },
+    {
+      title: "Start a Chapter",
+      description: "PLACEHOLDER: Gather student leaders and community partners to build a My Art Beats presence where you live.",
+      href: "/join/start-a-chapter",
+      className: "join-card--chapter",
+      eyebrow: "Grow the movement",
+    },
+  ],
+  followAlong: {
+    description: "PLACEHOLDER: Follow announcements, student showcases, and behind-the-scenes moments, then reach out when you are ready to connect.",
+    instagramUrl: "https://instagram.com/myartbeatsofficial",
+    href: "/contact",
+  },
+  volunteer: {
+    intro:
+      "PLACEHOLDER: Volunteers help make creative spaces welcoming, flexible, and full of possibility. Tell the team a little about your interests, availability, and the ways you would like to contribute.",
+    formUrl: "https://docs.google.com/forms/d/e/PLACEHOLDER/viewform",
+    note: "PLACEHOLDER: Responses go to the My Art Beats team, who will follow up with next steps.",
+  },
+  startChapter: {
+    intro:
+      "PLACEHOLDER: Starting a chapter means creating a consistent local rhythm of art, music, mentorship, and community care. Student leaders, families, educators, and community partners can all help shape a chapter.",
+    steps: [
+      { number: "01", title: "Gather your people", description: "PLACEHOLDER: Find a small group of student leaders and trusted adults who share the vision." },
+      { number: "02", title: "Find your first beat", description: "PLACEHOLDER: Choose an accessible creative activity or local partnership to begin with." },
+      { number: "03", title: "Make a simple plan", description: "PLACEHOLDER: Set a rhythm for meetings, outreach, volunteer roles, and communication." },
+      { number: "04", title: "Connect with the team", description: "PLACEHOLDER: Reach out so My Art Beats can help you turn the first gathering into a lasting chapter." },
+    ],
+  },
+};

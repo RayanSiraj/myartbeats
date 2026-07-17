@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { teamContent } from "@/lib/content";
+import PulseLine from "@/components/PulseLine";
+import { joinContent, teamContent } from "@/lib/content";
 
 export default function StartAChapter() {
   return (
@@ -7,9 +8,19 @@ export default function StartAChapter() {
       <div className="about-hero__intro">
         <p className="eyebrow text-poppy">Join My Art Beats</p>
         <h1 className="section-heading mt-3">Start a chapter.</h1>
-        <p>
-          PLACEHOLDER: Gather a few student leaders, find creative partners, and help bring an accessible My Art Beats community to your area.
-        </p>
+        <div className="join-hero__pulse"><PulseLine animate={false} color="poppy" variant="underline" /></div>
+        <p>{joinContent.startChapter.intro}</p>
+      </div>
+      <div className="chapter-start-steps">
+        {joinContent.startChapter.steps.map((step) => (
+          <article className="chapter-start-step" key={step.number}>
+            <span className="chapter-start-step__number">{step.number}</span>
+            <div>
+              <h2>{step.title}</h2>
+              <p>{step.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
       <div className="teams-chapters">
         <div className="teams-chapters__heading">
@@ -26,6 +37,12 @@ export default function StartAChapter() {
             <span className="font-bold">Visit chapter <span aria-hidden="true">→</span></span>
           </Link>
         ))}
+      </div>
+      <div className="join-contact-cta">
+        <p className="eyebrow text-sunshine">Ready to begin?</p>
+        <h2 className="section-heading mt-3">Let&apos;s find your first beat.</h2>
+        <p className="mt-4 max-w-2xl">PLACEHOLDER: Tell us where you are, who is joining you, and what kind of creative community you hope to build.</p>
+        <Link className="button button-outline mt-6" href="/contact">Contact the team</Link>
       </div>
     </section>
   );
