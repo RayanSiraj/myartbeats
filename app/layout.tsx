@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -30,18 +31,18 @@ export default function RootLayout({
       >
         <header>
           <nav aria-label="Main navigation">
-            <a href="/">My Art Beats</a>{" "}
-            <a href="/about">About</a>{" "}
-            <a href="/about/mission">Mission</a>{" "}
-            <a href="/about/teams">Teams</a>{" "}
-            <a href="/chapters/south-florida">South Florida</a>{" "}
-            <a href="/chapters/north-florida">North Florida</a>{" "}
-            <a href="/join">Join</a>{" "}
-            <a href="/events">Events</a>{" "}
-            <a href="/contact">Contact</a>
+            <Link href="/">My Art Beats</Link>{" "}
+            <Link href="/about">About</Link>{" "}
+            <Link href="/about/mission">Mission</Link>{" "}
+            <Link href="/about/teams">Teams</Link>{" "}
+            <Link href="/chapters/south-florida">South Florida</Link>{" "}
+            <Link href="/chapters/north-florida">North Florida</Link>{" "}
+            <Link href="/join">Join</Link>{" "}
+            <Link href="/events">Events</Link>{" "}
+            <Link href="/contact">Contact</Link>
           </nav>
         </header>
-        {children}
+        <main>{children}</main>
         <footer>
           <p>My Art Beats</p>
         </footer>
