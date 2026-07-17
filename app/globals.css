@@ -143,6 +143,160 @@ button:focus-visible {
     padding: 1.25rem;
   }
 
+  .events-hero {
+    max-width: 50rem;
+    padding: 5rem 0 2.5rem;
+  }
+
+  .events-hero p:not(.eyebrow) {
+    max-width: 42rem;
+    margin-top: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .events-controls {
+    display: grid;
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .events-panel:focus-visible {
+    outline: none;
+    border-radius: var(--radius-card);
+    box-shadow: var(--focus-ring);
+  }
+
+  .events-tabs,
+  .events-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .events-tab,
+  .events-filter {
+    min-height: 2.75rem;
+    border: 2px solid rgba(35, 42, 69, 0.2);
+    border-radius: var(--radius-full);
+    padding: 0.6rem 1rem;
+    background: transparent;
+    color: var(--color-ink);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+  }
+
+  .events-tab[aria-selected="true"] {
+    border-color: var(--color-cobalt);
+    background: var(--color-cobalt);
+    color: var(--color-canvas);
+  }
+
+  .events-filter[aria-pressed="true"] {
+    border-color: var(--color-ink);
+    background: var(--color-ink);
+    color: var(--color-canvas);
+  }
+
+  .events-filter:hover,
+  .events-tab:hover {
+    border-color: var(--color-cobalt);
+  }
+
+  .events-timeline {
+    position: relative;
+    max-width: 52rem;
+    padding: 1rem 0 2rem 3.25rem;
+  }
+
+  .events-timeline__spine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .events-year + .events-year {
+    margin-top: 3rem;
+  }
+
+  .events-year__heading {
+    position: relative;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-baloo-2), sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 0.95;
+  }
+
+  .events-timeline-card {
+    position: relative;
+  }
+
+  .events-timeline-card + .events-timeline-card {
+    margin-top: 1rem;
+  }
+
+  .events-timeline-card__node {
+    position: absolute;
+    top: 1.5rem;
+    left: -3.58rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border: 3px solid var(--color-canvas);
+    border-radius: var(--radius-full);
+    background: var(--color-poppy);
+    box-shadow: 0 0 0 2px var(--color-poppy);
+  }
+
+  .events-empty {
+    max-width: 44rem;
+    margin: 1rem 0 3rem;
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    background: rgba(255, 197, 61, 0.2);
+  }
+
+  .events-empty p {
+    font-size: 1.2rem;
+  }
+
+  .events-empty .button {
+    margin-top: 1.25rem;
+  }
+
+  .events-empty--upcoming {
+    border: 1px solid rgba(224, 67, 47, 0.24);
+    background: rgba(224, 67, 47, 0.08);
+  }
+
+  .events-empty__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .events-instagram-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-button);
+    padding: 0.65rem 1rem;
+    background: var(--color-poppy);
+    color: var(--color-canvas);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .events-instagram-link:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -168,6 +322,11 @@ button:focus-visible {
 
   .pulse-line--visible .pulse-line__path {
     stroke-dashoffset: 0;
+  }
+
+  .pulse-line--vertical {
+    width: 2.5rem;
+    height: 100%;
   }
 
   .site-header {

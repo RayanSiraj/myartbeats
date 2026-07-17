@@ -59,3 +59,14 @@ export const events: Event[] = [
     status: "past",
   },
 ];
+
+export function sortEventsByDate(eventList: Event[], direction: "asc" | "desc" = "desc"): Event[] {
+  return [...eventList].sort((a, b) => {
+    const comparison = a.date.localeCompare(b.date);
+    return direction === "asc" ? comparison : -comparison;
+  });
+}
+
+export function getEventsByStatus(status: EventStatus): Event[] {
+  return sortEventsByDate(events.filter((event) => event.status === status));
+}

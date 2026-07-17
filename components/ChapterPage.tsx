@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PulseLine from "@/components/PulseLine";
 import type { ChapterData } from "@/lib/chapters";
-import { events } from "@/lib/events";
+import { events, sortEventsByDate } from "@/lib/events";
 
 type ChapterPageProps = {
   chapter: ChapterData;
@@ -14,9 +14,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export default function ChapterPage({ chapter }: ChapterPageProps) {
-  const chapterEvents = events
-    .filter((event) => event.chapter === chapter.slug)
-    .sort((a, b) => b.date.localeCompare(a.date));
+  const chapterEvents = sortEventsByDate(events.filter((event) => event.chapter === chapter.slug));
 
   return (
     <>

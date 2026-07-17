@@ -2,7 +2,7 @@ import Link from "next/link";
 import PulseLine from "@/components/PulseLine";
 import ProgramBadge from "@/components/ProgramBadge";
 import { homeContent } from "@/lib/content";
-import { events } from "@/lib/events";
+import { getEventsByStatus } from "@/lib/events";
 
 const impactColors = ["bg-cobalt", "bg-poppy", "bg-violet"];
 
@@ -13,10 +13,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export default function Home() {
-  const pastEvents = events
-    .filter((event) => event.status === "past")
-    .sort((a, b) => b.date.localeCompare(a.date))
-    .slice(0, 6);
+  const pastEvents = getEventsByStatus("past").slice(0, 6);
 
   return (
     <>
