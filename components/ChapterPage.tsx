@@ -13,14 +13,21 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
+const accentTextColors = {
+  cobalt: "var(--color-cobalt)",
+  marigold: "var(--color-marigold-text)",
+  poppy: "var(--color-poppy-text)",
+} as const;
+
 export default function ChapterPage({ chapter }: ChapterPageProps) {
   const chapterEvents = sortEventsByDate(events.filter((event) => event.chapter === chapter.slug));
+  const accentTextColor = accentTextColors[chapter.accentColor];
 
   return (
     <>
       <section className={`chapter-hero ${chapter.washClass}`}>
         <div className="site-container">
-          <p className="eyebrow" style={{ color: `var(--color-${chapter.accentColor})` }}>
+          <p className="eyebrow" style={{ color: accentTextColor }}>
             My Art Beats
           </p>
           <h1 className="section-heading mt-3">{chapter.name} Chapter</h1>
@@ -34,7 +41,7 @@ export default function ChapterPage({ chapter }: ChapterPageProps) {
 
       <section className="site-container chapter-roster">
         <div className="chapter-section-heading">
-          <p className="eyebrow" style={{ color: `var(--color-${chapter.accentColor})` }}>The local team</p>
+          <p className="eyebrow" style={{ color: accentTextColor }}>The local team</p>
           <h2 className="section-heading mt-3">People behind this chapter.</h2>
         </div>
         <div className="team-grid mt-8">
@@ -64,7 +71,7 @@ export default function ChapterPage({ chapter }: ChapterPageProps) {
 
       <section className="site-container chapter-events">
         <div className="chapter-section-heading">
-          <p className="eyebrow" style={{ color: `var(--color-${chapter.accentColor})` }}>Chapter events</p>
+          <p className="eyebrow" style={{ color: accentTextColor }}>Chapter events</p>
           <h2 className="section-heading mt-3">Making an impact together.</h2>
         </div>
         {chapterEvents.length > 0 ? (
@@ -79,7 +86,7 @@ export default function ChapterPage({ chapter }: ChapterPageProps) {
                   }}
                 />
                 <div className="event-card__content">
-                  <p className="eyebrow" style={{ color: `var(--color-${chapter.accentColor})` }}>
+                  <p className="eyebrow" style={{ color: accentTextColor }}>
                     {dateFormatter.format(new Date(`${event.date}T12:00:00`))}
                   </p>
                   <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>
