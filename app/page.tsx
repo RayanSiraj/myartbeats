@@ -56,7 +56,7 @@ export default function Home() {
           <article className="stat-blob stat-blob--events">
             <strong>25+</strong>
             <h3>Events</h3>
-            <p>Empowering individuals through hands-on creative experiences.</p>
+            <p>Empowering individuals through hands-on creative experiences</p>
           </article>
           <article className="stat-blob stat-blob--served">
             <strong>800+</strong>
@@ -66,7 +66,7 @@ export default function Home() {
           <article className="stat-blob stat-blob--hours">
             <strong>1.8K+</strong>
             <h3>Hours Volunteered</h3>
-            <p>Over 1.8K hours dedicated to planning, teaching, and serving.</p>
+            <p>Over 1.8K hours dedicated to planning, teaching, and serving</p>
           </article>
         </div>
       </section>
