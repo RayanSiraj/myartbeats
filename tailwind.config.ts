@@ -15,7 +15,8 @@ const config: Config = {
         cobalt: "var(--color-cobalt)",
         poppy: "var(--color-poppy)",
         "poppy-text": "var(--color-poppy-text)",
-        violet: "var(--color-violet)",
+        marigold: "var(--color-marigold)",
+        "marigold-text": "var(--color-marigold-text)",
         sunshine: "var(--color-sunshine)",
       },
       fontFamily: {
@@ -48,7 +49,7 @@ const config: Config = {
     "chapter-page--north",
     "team-card__portrait--cobalt",
     "team-card__portrait--poppy",
-    "team-card__portrait--violet",
+    "team-card__portrait--marigold",
     "team-card__portrait--sunshine",
   ],
   plugins: [],

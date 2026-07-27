@@ -24,7 +24,7 @@ export default function StartAChapter() {
       </div>
       <div className="teams-chapters">
         <div className="teams-chapters__heading">
-          <p className="eyebrow text-violet">Our chapters</p>
+          <p className="eyebrow text-marigold-text">Our chapters</p>
           <h2 className="section-heading mt-3">Find a local beat or get inspired.</h2>
         </div>
         {teamContent.chapters.map((chapter) => (

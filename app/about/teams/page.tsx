@@ -31,7 +31,7 @@ export default function Teams() {
 
         <div className="teams-chapters">
           <div className="teams-chapters__heading">
-            <p className="eyebrow text-violet">Beyond the executive team</p>
+            <p className="eyebrow text-marigold-text">Beyond the executive team</p>
             <h2 className="section-heading mt-3">Meet your local chapter.</h2>
           </div>
           {teamContent.chapters.map((chapter) => (

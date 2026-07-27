@@ -1,10 +1,11 @@
 import Link from "next/link";
+import HeroPalette from "@/components/HeroPalette";
 import PulseLine from "@/components/PulseLine";
 import ProgramBadge from "@/components/ProgramBadge";
 import { homeContent } from "@/lib/content";
 import { getEventsByStatus } from "@/lib/events";
 
-const impactColors = ["bg-cobalt", "bg-poppy", "bg-violet"];
+const impactColors = ["bg-cobalt", "bg-poppy", "bg-marigold"];
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -32,6 +33,9 @@ export default function Home() {
               <Link className="button button-outline" href="/events">See our events</Link>
             </div>
           </div>
+          <div className="home-hero__visual">
+            <HeroPalette />
+          </div>
           <div className="hero-note">
             <p className="eyebrow">Who we are</p>
             <p className="mt-3">{homeContent.heroIntro}</p>
@@ -40,6 +44,30 @@ export default function Home() {
             </p>
             <div className="mt-6"><ProgramBadge /></div>
           </div>
+        </div>
+      </section>
+
+      <section className="site-container home-stats" aria-labelledby="home-stats-heading">
+        <div className="home-stats__heading">
+          <p className="eyebrow text-poppy-text">The beat in numbers</p>
+          <h2 className="section-heading mt-3 text-ink" id="home-stats-heading">Small moments can make a big impact.</h2>
+        </div>
+        <div className="home-stats__grid">
+          <article className="stat-blob stat-blob--events">
+            <strong>25+</strong>
+            <h3>Events</h3>
+            <p>Empowering individuals through hands-on creative experiences.</p>
+          </article>
+          <article className="stat-blob stat-blob--served">
+            <strong>800+</strong>
+            <h3>Individuals Served</h3>
+            <p>Through our workshops, service projects, and educational events.</p>
+          </article>
+          <article className="stat-blob stat-blob--hours">
+            <strong>1.8K+</strong>
+            <h3>Hours Volunteered</h3>
+            <p>Over 1.8K hours dedicated to planning, teaching, and serving.</p>
+          </article>
         </div>
       </section>
 
@@ -67,7 +95,7 @@ export default function Home() {
 
       <section className="home-act home-act--coalesce">
         <div className="site-container">
-          <div className="pulse-divider"><PulseLine color="violet" /></div>
+          <div className="pulse-divider"><PulseLine color="marigold" /></div>
           <div className="home-act__body mt-8">
             <p className="eyebrow">The third beat</p>
             <h2 className="section-heading mt-3">{homeContent.sections.coalesce.title}</h2>
@@ -111,7 +139,7 @@ export default function Home() {
       <section className="site-container py-16">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="eyebrow text-violet">See our impact</p>
+            <p className="eyebrow text-marigold-text">See our impact</p>
             <h2 className="section-heading mt-3 text-ink">A highlight reel of making together</h2>
           </div>
           <Link className="button button-outline" href="/events">View All Events</Link>
@@ -121,7 +149,7 @@ export default function Home() {
             <article className="event-card" key={event.title}>
               <div className={`event-card__color ${impactColors[index % impactColors.length]}`} style={{ opacity: 0.7 + (index % 3) * 0.1 }} />
               <div className="event-card__content">
-                <p className="eyebrow text-violet">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
+                <p className="eyebrow text-marigold-text">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
                 <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>
                 <p className="mt-2 text-ink/80">{event.description}</p>
               </div>

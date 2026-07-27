@@ -18,7 +18,7 @@ const chapterLabels: Record<EventChapter, string> = {
   "south-florida": "South Florida",
   "north-florida": "North Florida",
 };
-const eventColors = ["var(--color-cobalt)", "var(--color-poppy)", "var(--color-violet)"];
+const eventColors = ["var(--color-cobalt)", "var(--color-poppy)", "var(--color-marigold)"];
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "long",
   day: "numeric",
@@ -157,7 +157,7 @@ export default function EventsExplorer() {
                     <div className="event-card">
                       <div className="event-card__color" style={{ backgroundColor: eventColors[index % eventColors.length] }} />
                       <div className="event-card__content">
-                        <p className="eyebrow text-violet">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
+                        <p className="eyebrow text-marigold-text">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
                         <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>
                         <p className="mt-2 text-ink">{event.description}</p>
                         {event.chapter && (

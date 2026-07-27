@@ -77,7 +77,7 @@ export const missionContent = {
       description:
         "PLACEHOLDER: We connect families, educators, artists, and student volunteers across our chapters. Through exhibitions and fundraisers, individual acts of creativity become a shared movement for inclusion and opportunity.",
       className: "mission-pillar--coalesce",
-      color: "violet" as const,
+      color: "marigold" as const,
     },
   ],
   closing:
@@ -90,7 +90,7 @@ export const teamContent = {
   members: [
     { name: "Maya Patel", role: "Co-Founder & Executive Director", initials: "MP", color: "cobalt", bio: "PLACEHOLDER: Maya coordinates the organization’s vision, partnerships, and student-led programming." },
     { name: "Jordan Williams", role: "Programs Director", initials: "JW", color: "poppy", bio: "PLACEHOLDER: Jordan shapes welcoming art and music sessions with mentors and chapter volunteers." },
-    { name: "Sofia Martinez", role: "Community Outreach Lead", initials: "SM", color: "violet", bio: "PLACEHOLDER: Sofia builds relationships with schools, care communities, and local creative partners." },
+    { name: "Sofia Martinez", role: "Community Outreach Lead", initials: "SM", color: "marigold", bio: "PLACEHOLDER: Sofia builds relationships with schools, care communities, and local creative partners." },
     { name: "Ethan Chen", role: "Chapter Development Lead", initials: "EC", color: "sunshine", bio: "PLACEHOLDER: Ethan helps student organizers turn shared ideas into strong, sustainable chapter plans." },
     { name: "Amara Johnson", role: "Events & Fundraising Lead", initials: "AJ", color: "cobalt", bio: "PLACEHOLDER: Amara creates exhibitions and fundraisers that invite the wider community to participate." },
     { name: "Lucas Rivera", role: "Accessibility & Mentorship Lead", initials: "LR", color: "poppy", bio: "PLACEHOLDER: Lucas works with volunteers to make each activity more flexible, welcoming, and supportive." },

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type PulseColor = "cobalt" | "poppy" | "violet";
+type PulseColor = "cobalt" | "poppy" | "marigold";
 
 type PulseLineProps = {
   color?: PulseColor;
@@ -14,7 +14,7 @@ type PulseLineProps = {
 const colorValues: Record<PulseColor, string> = {
   cobalt: "var(--color-cobalt)",
   poppy: "var(--color-poppy)",
-  violet: "var(--color-violet)",
+  marigold: "var(--color-marigold)",
 };
 
 export default function PulseLine({

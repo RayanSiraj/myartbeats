@@ -34,7 +34,8 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="site-footer__bottom">
-          <p>501(c)(3) nonprofit organization · © {new Date().getFullYear()} My Art Beats</p>
+          <p>501(c)(3) nonprofit organization</p>
+          <p>© 2024–2026 My Art Beats. All Rights Reserved.</p>
           <a aria-label="My Art Beats on Instagram" href="https://instagram.com/myartbeatsofficial" rel="noreferrer" target="_blank">
             <InstagramIcon /> Instagram
           </a>

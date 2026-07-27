@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Logo from "@/components/Logo";
 import PulseLine from "@/components/PulseLine";
 import { ChevronDownIcon, CloseIcon, InstagramIcon, MenuIcon } from "@/components/icons";
 
@@ -38,9 +39,7 @@ function Dropdown({ name, open, setOpen }: { name: DropdownName; open: boolean; 
   const dropdown = dropdowns[name];
   const firstLink = useRef<HTMLAnchorElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
-  const menuLinks = name === "chapters"
-    ? dropdown.links
-    : [{ label: `All ${dropdown.label}`, href: dropdown.href }, ...dropdown.links];
+  const menuLinks = dropdown.links;
 
   useEffect(() => {
     if (open) firstLink.current?.focus();
@@ -112,8 +111,11 @@ export default function SiteHeader() {
     <header className="site-header">
       <div className="site-container site-header__inner">
         <Link className="site-wordmark" href="/">
-          <span>My Art Beats</span>
-          <PulseLine animate={false} color="poppy" variant="underline" />
+          <Logo />
+          <span className="site-wordmark__type">
+            <span>My Art Beats</span>
+            <PulseLine animate={false} color="poppy" variant="underline" />
+          </span>
         </Link>
         <button
           aria-expanded={mobileOpen}
