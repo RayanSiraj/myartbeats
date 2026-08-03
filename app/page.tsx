@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HeroPalette from "@/components/HeroPalette";
 import PulseLine from "@/components/PulseLine";
 import ProgramBadge from "@/components/ProgramBadge";
@@ -147,7 +148,21 @@ export default function Home() {
         <div className="impact-grid">
           {pastEvents.map((event, index) => (
             <article className="event-card" key={event.title}>
-              <div className={`event-card__color ${impactColors[index % impactColors.length]}`} style={{ opacity: 0.7 + (index % 3) * 0.1 }} />
+              <div className="event-card__media">
+                {event.photos.length > 0 ? (
+                  <Image
+                    alt={`${event.title} — My Art Beats event photo`}
+                    fill
+                    sizes="(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw"
+                    src={event.photos[0]}
+                  />
+                ) : (
+                  <div
+                    className={`event-card__color ${impactColors[index % impactColors.length]}`}
+                    style={{ opacity: 0.7 + (index % 3) * 0.1 }}
+                  />
+                )}
+              </div>
               <div className="event-card__content">
                 <p className="eyebrow text-marigold-text">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
                 <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>

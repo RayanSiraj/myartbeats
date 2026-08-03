@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import PulseLine from "@/components/PulseLine";
 import { InstagramIcon } from "@/components/icons";
@@ -155,7 +156,21 @@ export default function EventsExplorer() {
                   <article className="events-timeline-card" key={event.title}>
                     <span aria-hidden="true" className="events-timeline-card__node" />
                     <div className="event-card">
-                      <div className="event-card__color" style={{ backgroundColor: eventColors[index % eventColors.length] }} />
+                      <div className="event-card__media">
+                        {event.photos.length > 0 ? (
+                          <Image
+                            alt={`${event.title} — My Art Beats event photo`}
+                            fill
+                            sizes="(min-width: 48rem) 48rem, 100vw"
+                            src={event.photos[0]}
+                          />
+                        ) : (
+                          <div className="event-card__color" style={{ backgroundColor: eventColors[index % eventColors.length] }} />
+                        )}
+                        {event.photos.length > 1 && (
+                          <span className="event-card__photo-count">+{event.photos.length - 1} photos</span>
+                        )}
+                      </div>
                       <div className="event-card__content">
                         <p className="eyebrow text-marigold-text">{dateFormatter.format(new Date(`${event.date}T12:00:00`))}</p>
                         <h3 className="display-font mt-2 text-2xl font-extrabold text-ink">{event.title}</h3>

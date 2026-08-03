@@ -138,7 +138,30 @@ button:focus-visible {
   }
 
   .event-card__color {
-    height: 0.75rem;
+    height: 100%;
+  }
+
+  .event-card__media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--color-cobalt);
+  }
+
+  .event-card__media img {
+    object-fit: cover;
+  }
+
+  .event-card__photo-count {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    border-radius: var(--radius-full);
+    padding: 0.35rem 0.65rem;
+    background: var(--color-ink);
+    color: var(--color-sunshine);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
   }
 
   .event-card__content {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PulseLine from "@/components/PulseLine";
 import type { ChapterData } from "@/lib/chapters";
 import { events, sortEventsByDate } from "@/lib/events";
@@ -78,13 +79,24 @@ export default function ChapterPage({ chapter }: ChapterPageProps) {
           <div className="impact-grid mt-8">
             {chapterEvents.map((event, index) => (
               <article className="event-card" key={event.title}>
-                <div
-                  className="event-card__color"
-                  style={{
-                    backgroundColor: `var(--color-${chapter.accentColor})`,
-                    opacity: 0.7 + (index % 3) * 0.1,
-                  }}
-                />
+                <div className="event-card__media">
+                  {event.photos.length > 0 ? (
+                    <Image
+                      alt={`${event.title} — My Art Beats event photo`}
+                      fill
+                      sizes="(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw"
+                      src={event.photos[0]}
+                    />
+                  ) : (
+                    <div
+                      className="event-card__color"
+                      style={{
+                        backgroundColor: `var(--color-${chapter.accentColor})`,
+                        opacity: 0.7 + (index % 3) * 0.1,
+                      }}
+                    />
+                  )}
+                </div>
                 <div className="event-card__content">
                   <p className="eyebrow" style={{ color: accentTextColor }}>
                     {dateFormatter.format(new Date(`${event.date}T12:00:00`))}
